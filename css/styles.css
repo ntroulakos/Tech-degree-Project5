@@ -1,11 +1,38 @@
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+/* I preffered the black background as the white one was to bright. */
+    background-color: black;
+  }
+  header {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+  }
+/* I changed a little bit the search bar, to improve its style. */
+  #pictureSearch {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
 
 .grid {
-    max-width: 800px;
+    max-width: 1024px;
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+/* Instead of media queries, the minmax and the auto-fit was used.  */
+    grid-template-columns: repeat(auto-fit,minmax(150px,200px));
+    gap: 25px;
 }
